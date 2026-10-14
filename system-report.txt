@@ -1,0 +1,24 @@
+LINUX SYSTEM HEALTH REPORT
+
+Hostname: kali
+
+Kernal: 6.19.14+kali-amd64
+
+Disk usage:
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/sda1        79G   16G   59G  22% /
+
+Memory usage:
+               total        used        free      shared  buff/cache   available
+Mem:           1.9Gi       804Mi       580Mi        16Mi       741Mi       1.1Gi
+Swap:          953Mi          0B       953Mi
+
+Top 5 running processes by CPU usage:
+    PID COMMAND         %CPU %MEM
+    659 Xorg             2.5  8.6
+   1107 xfwm4            0.4  6.9
+   1213 wrapper-2.0      0.4  2.5
+   3353 qterminal        0.4  3.6
+   1215 wrapper-2.0      0.4  1.5
+
+Report generated on: Wed Oct 14 03:48:28 PM IST 2026
