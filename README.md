@@ -1,36 +1,84 @@
 # Linux System Health Reporter
 
-## About The Project
+A beginner-friendly Bash project that collects basic system information from a Linux computer and generates a readable text report.
 
-Linux System Health Reporter is a beginner-friendly bash project that collects basic information about a linux computer and saves it in a readable text report.
+## About the Project
+
+Linux System Health Reporter is a simple system monitoring tool built using Bash scripting.
+
+It collects essential system information, including hostname, kernel version, disk usage, memory usage, and CPU-intensive processes, and saves the results in a text file.
 
 ## Features
 
 - Displays the system hostname
-- Displays the Kernal Version
-- Displays Disk usage
-- Displays Memory usage
+- Displays the Linux kernel version
+- Shows disk usage
+- Shows memory usage
 - Lists the top 5 processes by CPU usage
-- saves output to a text file
+- Saves the output to a text file
 
 ## Requirements
 
 - A Linux operating system
 - Bash
-- Standerd Linux utilities: hostname,uname,df,free,and ps
+- Standard Linux utilities:
+  - `hostname`
+  - `uname`
+  - `df`
+  - `free`
+  - `ps`
 - Git for version control
 
-## project files 
+## Project Structure
 
-- 'system_report.sh" - Bash script that generates the report
-- 'system-report.txt' - Generated system health report
+```text
+linux-system-health-reporter/
+│
+├── system_report.sh
+├── system-report.txt
+└── README.md
+```
 
-## How to run
+## How to Run
 
-1. Open a terminal
-2.  Navigate to the project directory
+1. Open a terminal.
+2. Navigate to the project directory.
 3. Make the script executable:
 
+   ```bash
+   chmod +x system_report.sh
+   ```
 
- '''bash
- chmod +x system_report.sh 
+4. Run the script:
+
+   ```bash
+   ./system_report.sh
+   ```
+
+5. Open the generated report:
+
+   ```bash
+   cat system-report.txt
+   ```
+
+## Learning Objectives
+
+This project helped me practice:
+
+- Bash scripting
+- Linux system commands
+- File handling
+- System monitoring
+- Git and GitHub
+
+## Future Improvements
+
+- Add CPU usage information
+- Include system uptime
+- Add timestamps to reports
+- Generate reports in CSV format
+- Add automated system health checks
+
+## Author
+
+Arya
