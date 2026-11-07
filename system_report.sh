@@ -1,30 +1,51 @@
+```bash
 #!/bin/bash
 
 REPORT="system-report.txt"
 
 {
-	echo "LINUX SYSTEM HEALTH REPORT"
-	echo ""
+    echo "======================================"
+    echo "       LINUX SYSTEM HEALTH REPORT"
+    echo "======================================"
+    echo ""
 
-	echo "Hostname: $(hostname)"
-	echo ""
+    echo "Report Generated: $(date)"
+    echo ""
 
-	echo "Kernal: $(uname -r)"
-	echo ""
+    echo "Hostname:"
+    hostname
+    echo ""
 
-	echo "Disk usage:"
-	df -h /
-	echo ""
+    echo "Kernel Version:"
+    uname -r
+    echo ""
 
-	echo "Memory usage:"
-	free -h
-	echo ""
+    echo "System Uptime:"
+    uptime -p
+    echo ""
 
-	echo "Top 5 running processes by CPU usage:"
-	ps -eo pid,comm,%cpu,%mem --sort=-%cpu | head -n 6
+    echo "CPU Information:"
+    lscpu | grep -E "Model name|CPU\(s\):" | head -n 2
+    echo ""
 
-	echo ""
-	echo "Report generated on: $(date)"
+    echo "Disk Usage:"
+    df -h /
+    echo ""
+
+    echo "Memory Usage:"
+    free -h
+    echo ""
+
+    echo "Top 5 Running Processes by CPU Usage:"
+    ps -eo pid,comm,%cpu,%mem --sort=-%cpu | head -n 6
+    echo ""
+
+    echo "======================================"
+    echo "       END OF SYSTEM REPORT"
+    echo "======================================"
 
 } > "$REPORT"
 
+echo "System report generated successfully!"
+echo "Saved to: $REPORT"
+```
